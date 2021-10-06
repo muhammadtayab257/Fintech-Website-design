@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
 @import "./partials/header.css";
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
 :root {
   --light: #f8f9fa;
   --white: #fff;
@@ -11,18 +11,20 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bg1: #f4feff;
   --sec-padding: 6rem 0;
   --font-family1: "Nunito", sans-serif;
   --inputBackground: #f1f4f7;
   /*? Typography */
   --first-heading: 66px;
-  --second-heading: 35px;
+  --second-heading: 40px;
+  --third-heading: 35px;
   --third-headings: 30px;
   --titleColor: #0a2540;
   --first-para: 20px;
-  --textColor: #425466;
+  --second-para: 17px;
+  --textColor1: #7c8297;
+  --textColor2: #7c8297;
   /*? Backgrounds */
 }
 
@@ -39,8 +41,8 @@ body {
 }
 
 /*==========================================
-   Global Classes
-================================ */
+              Global Classes
+========================================== */
 
 li {
   list-style: none;
@@ -57,7 +59,7 @@ a, a:hover {
 
 h2, h2, h4, h5, h6 {
   font-family: var(--font-family1);
-  color: #2b044d;
+  color: var(--titleColor);
   font-weight: 700;
 }
 
@@ -79,12 +81,14 @@ p {
   }
 }
 
-/*========== Main Csss =========*/
+/*==========================================
+              Main Csss 
+==========================================/
 
-/*! Hero Section */
+/*=====Hero Section=====*/
 
 .hero-section {
-  background: url('../media/hero-bg.jpg') no-repeat center center;
+  background: url("../media/hero-bg.jpg") no-repeat center center;
   background-size: cover;
   /* background: #f0eff4; */
   padding: 50px 0;
@@ -108,49 +112,121 @@ p {
   font-size: 15px;
   font-weight: 600;
   color: var(--white);
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   border-radius: 38px;
 }
-.signup-btn:hover{
+
+.signup-btn:hover {
   color: var(--white);
 }
-/*! Clients Logo  */
+
+/*=====Clients Logo=====*/
 
 .client-logos {
+  padding: 24px 0 30px 0;
+}
+
+.client-logos .logo {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  padding: 1rem;
+}
+
+.logo img {
+  width: 150px;
+  height: 75px;
+}
+
+/*=====features=====*/
+
+.features {
   padding: 50px 0;
 }
 
-.client-logos .d-flex {
-  overflow-x: auto;
-  justify-content: center;
+.feature-title {
+  text-align: Center;
 }
 
-.client-logos .d-flex::-webkit-scrollbar {
-  width: 1px;
-  height: 6px;
+.feature-title h2 {
+  font-size: var(--third-heading);
+  margin-bottom: 10px;
 }
 
-.client-logos .d-flex::-webkit-scrollbar-track {
-  background-color: #c0c0c04b;
-  border-radius: 1px;
+.feature-title p { 
+  max-width: 500px;
+  font-size: var(--second-para);
 }
 
-.client-logos .d-flex::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #CC92FC;
+.feature-card {
+  box-shadow: 0 4px 22px rgb(202 202 202 / 25%);
+  background: url('../media/features-bg.svg') no-repeat;
+  background-position-y: -2px;
+  background-position-x: -2px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  padding: 40px 25px;
+  margin: 20px 0px;
+  cursor: pointer;
 }
 
-/* ================================ All Media Queries ================================ */
+.feature-card:hover {
+  transform: scale(1.05);
+  background-image: url('../media/features-hover-bg.svg');
+}
+
+.icon img {
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  background-color: #3987f0;
+  border-radius: 100%;
+}
+
+.feature-text h5 {
+  font-size: 18px;
+  letter-spacing: .6px;
+  font-weight: 700;
+}
+
+.feature-text p {
+  font-size: var(--second-para);
+  line-height: 28px;
+  color: var(--textColor1);
+}
+
+/* ================================ 
+             All Media Queries 
+================================ */
+
+@media (min-width: 991px) {
+  .feature-card {
+    max-width: 363px;
+  }
+}
 
 @media (max-width: 991px) {
   .hero-section {
     margin: 0 0;
     padding: 70px 0px;
   }
-  /*!Clients Logo Section */
+  /*=====Clients Logo Section =====*/
   .client-logos .d-flex {
     overflow-x: auto;
     justify-content: left;
+  }
+  .client-logos .d-flex::-webkit-scrollbar {
+    width: 1px;
+    height: 6px;
+  }
+  .client-logos .d-flex::-webkit-scrollbar-track {
+    background-color: #c0c0c04b;
+    border-radius: 1px;
+  }
+  .client-logos .d-flex::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #cc92fc;
   }
 }
 
