@@ -185,9 +185,9 @@ p {
 /*=====features=====*/
 
 .features {
-  clip-path: polygon(100% 0, 100% 87%, 0 98%, 0 10%);
-  background-color: #F5F9FF;
-  padding: 120px 0;
+  /* clip-path: polygon(100% 0, 100% 87%, 0 98%, 0 10%); */
+  /* background-color: #F5F9FF; */
+  padding: 80px 0;
 }
 
 .feature-title {
@@ -253,12 +253,48 @@ p {
   left: 3px;
   font-size: 12px;
 }
+
 /*===== Why Choose Us=====*/
 
-.why-us{
+.why-us {
+  margin: 5px 0;
+  padding: 50px 0 120px 0;
+  background-color: var(--main-color);
+  clip-path: polygon(100% 0, 100% 87%, 0 98%, 0 10%);
+  border-radius: 5px;
+}
+
+.why-us-title {
+  padding-top: 70px;
+}
+
+.why-us-title h2 {
+  color: var(--white);
+  font-size: var(--second-heading);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.why {
+  padding: 20px 0;
+}
+
+.why .icon {
   margin: 10px 0;
-  padding:40px 0;
-  background-color: var(--main-color)
+}
+
+.why .text h5 {
+  color: var(--white);
+  font-size: 18px;
+  letter-spacing: .6px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.why .text p {
+  color: var(--white);
+  font-size: var(--second-para);
+  line-height: 28px;
 }
 
 /* ================================ 
@@ -299,9 +335,14 @@ p {
   }
   /* ===== Features===== */
   .features {
-    clip-path: polygon(100% 0, 100% 87%, 0 98%, 0 10%);
-    background-color: #F6F9FC;
     padding: 160px 0;
+  }
+  /* ===== Why us===== */
+  .why-us-title {}
+  .why-us {
+    padding: 50px 0 140px 0;
+    clip-path: polygon(100% 0, 100% 94%, 0 101%, 0 4%);
+    border-radius: 5px;
   }
 }
 
