@@ -7,6 +7,7 @@ Paltform :166
 Payment Support :208
 Features :217 
 Why Us :289
+Developers
 All Media Queries :329
 Media Queries Above 991px : 333
 Media Queries Below 991px : 343
@@ -32,7 +33,7 @@ Media Queries Below 991px : 343
   --inputBackground: #f1f4f7;
   /*? Typography */
   --first-heading: 66px;
-  --second-heading: 40px;
+  --second-heading: 43px;
   --third-heading: 35px;
   --third-headings: 30px;
   --titleColor: #0a2540;
@@ -143,7 +144,7 @@ p {
 /*=====Clients Logo=====*/
 
 .client-logos {
-  padding: 24px 0 30px 0;
+  padding: 24px 15px 30px 15px;
 }
 
 .client-logos .logo {
@@ -160,7 +161,7 @@ p {
 /*=====Platform=====*/
 
 .platform {
-  padding: 50px 0;
+  padding: 50px 15px;
 }
 
 .platform-text h2 {
@@ -211,7 +212,7 @@ p {
 /*=====features=====*/
 
 .features {
-  padding: 30px 0;
+  padding: 30px 15px;
 }
 
 .feature-title {
@@ -281,8 +282,8 @@ p {
 /*===== Why Choose Us=====*/
 
 .why-us {
-  margin: 5px 0;
-  padding: 50px 0 120px 0;
+  margin: 5px 0px;
+  padding: 50px 15px 140px!important;
   background-color: var(--main-color);
   clip-path: polygon(100% 0, 100% 87%, 0 98%, 0 10%);
   border-radius: 5px;
@@ -319,6 +320,38 @@ p {
   color: var(--white);
   font-size: var(--second-para);
   line-height: 28px;
+}
+
+/*===== Developers =====*/
+
+.developers {
+  /* background: #0A2540; */
+  padding: 90px 15px;
+}
+
+.api-text h2 {
+  font-size: var(--second-heading);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.api-text h2 span {
+  color: var(--main-color);
+}
+
+.api-text p {
+  font-size: var(--second-para);
+  line-height: 28px;
+  color: var(--textColor1);
+}
+
+.api-text .signup-btn {
+  background-color: var(--main-color);
+  ;
+}
+
+.icon-text {
+  margin-top: 14px;
 }
 
 /* ================================ 
@@ -359,7 +392,7 @@ p {
   }
   /* ===== Features===== */
   .features {
-    padding: 160px 0;
+    padding: 60px 15px;
   }
   /* ===== Why us===== */
   .why-us {
