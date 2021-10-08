@@ -1,36 +1,27 @@
-/* 
+/* ====================
 ?Fintech Landing Page Designed By Tayyab
-=====Table Of Contect=====
-Hero Section :97
-Clients Logo :149
-Paltform :166
-Payment Support :208
-Features :217 
-Why Us :289
-Developers
-All Media Queries :329
+=====TABLE OF CONTENT=====
+Hero Section
+Clients Logo Section
+Paltform Section
+Payment Support Section
+Features Section 
+Why Us Section
+Developers Section
+All Media Queries Section
 Media Queries Above 991px : 333
 Media Queries Below 991px : 343
-*/
+====================*/
 
 @import "./partials/header.css";
-@import "./partials/Common-classes.css";
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
 :root {
   --light: #f8f9fa;
   --white: #fff;
   --dark: #343a40;
   --main-color: #3987f0;
-  /*? BreakPoints  */
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bg1: #f4feff;
-  --sec-padding: 6rem 0;
   --font-family1: "Nunito", sans-serif;
-  --inputBackground: #f1f4f7;
   /*? Typography */
   --first-heading: 66px;
   --second-heading: 43px;
@@ -87,14 +78,37 @@ p {
   max-width: 1200px;
 }
 
-@media (max-width: 867px) {
-  :root {
-    /*? Typography */
-    --first-heading: 35px;
-    --second-heading: 30px;
-    --third-headings: 30px;
-    --first-para: 19px;
-  }
+.heading-1 {
+  font-size: var(--first-heading);
+  font-weight: 800;
+  color: var(--titleColor);
+}
+
+.headind-2 {
+  font-size: var(--second-heading);
+  margin-bottom: 10px;
+  font-weight: 800;
+  line-height: 55px;
+  text-transform: capitalize;
+}
+
+.btn-blue {
+  background: var(--titleColor);
+  padding: 7px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.6px;
+  border-radius: 38px;
+}
+
+.btn.blue {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+span.blue {
+  color: var(--main-color);
 }
 
 /*==========================================
@@ -112,24 +126,8 @@ p {
   border-radius: 9px 9px 90px 9px;
 }
 
-.hero-text h1 {
-  font-size: var(--first-heading);
-  font-weight: 800;
-  color: var(--titleColor);
-}
-
 .hero-text p {
   font-size: var(--first-para);
-}
-
-.signup-btn {
-  background: var(--titleColor);
-  padding: 7px 16px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.6px;
-  border-radius: 38px;
 }
 
 .signup-btn:hover {
@@ -162,16 +160,6 @@ p {
 
 .platform {
   padding: 50px 15px;
-}
-
-.platform-text h2 {
-  font-size: var(--second-heading);
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-
-.platform-text h2 span {
-  color: var(--main-color);
 }
 
 .platform-text p, .platform-text .list li {
@@ -217,12 +205,6 @@ p {
 
 .feature-title {
   text-align: Center;
-}
-
-.feature-title h2 {
-  font-size: var(--second-heading);
-  margin-bottom: 10px;
-  font-weight: 800;
 }
 
 .feature-title p {
@@ -293,13 +275,6 @@ p {
   padding-top: 70px;
 }
 
-.why-us-title h2 {
-  color: var(--white);
-  font-size: var(--second-heading);
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-
 .why {
   padding: 20px 0;
 }
@@ -325,18 +300,7 @@ p {
 /*===== Developers =====*/
 
 .developers {
-  /* background: #0A2540; */
-  padding: 90px 15px;
-}
-
-.api-text h2 {
-  font-size: var(--second-heading);
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-
-.api-text h2 span {
-  color: var(--main-color);
+  padding: 70px 15px;
 }
 
 .api-text p {
@@ -359,7 +323,6 @@ p {
 ================================ */
 
 @media (min-width: 991px) {
-  /* ===== Features ===== */
   .feature-card {
     max-width: 363px;
   }
@@ -373,38 +336,40 @@ p {
     margin: 0 0;
     padding: 70px 0px;
   }
-  /*=====Clients Logo Section =====*/
-  .client-logos .d-flex {
-    overflow-x: auto;
-    justify-content: left;
-  }
-  .client-logos .d-flex::-webkit-scrollbar {
-    width: 1px;
-    height: 6px;
-  }
-  .client-logos .d-flex::-webkit-scrollbar-track {
-    background-color: #c0c0c04b;
-    border-radius: 1px;
-  }
-  .client-logos .d-flex::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #cc92fc;
-  }
-  /* ===== Features===== */
-  .features {
-    padding: 60px 15px;
-  }
-  /* ===== Why us===== */
   .why-us {
     padding: 50px 0 140px 0;
-    clip-path: polygon(100% 0, 100% 94%, 0 101%, 0 4%);
+    clip-path: polygon(100% 0, 100% 96%, 0 100%, 0 4%);
     border-radius: 5px;
   }
 }
 
 @media (max-width: 767px) {
-  /* ===== Hero Section ===== */
   .hero-image {
     display: none;
+  }
+  .client-logos {
+    padding: 19px 15px 0px 15px;
+  }
+  .logo img {
+    width: 58px;
+    height: 30px;
+  }
+  .client-logos .logo {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    padding: 8px;
+  }
+  .payment-support {
+    font-size: 40px;
+    margin: 1px 12px;
+  }
+  .heading-1 {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--titleColor);
+  }
+  .headind-2 {
+    font-size: 24px;
+    line-height: 35px;
   }
 }
