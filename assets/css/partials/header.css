@@ -54,9 +54,14 @@
         top: 70px;
         left: 0;
         width: 100%;
+        overflow: hidden;
         background: rgb(245, 242, 242);
-        padding: 20px 15px;
+        padding:20px 10px;
         display: none;
+    }
+    .nav-links.active {
+        height: auto;
+        visibility: visible;
     }
     .hamberger-menu {
         display: block;
